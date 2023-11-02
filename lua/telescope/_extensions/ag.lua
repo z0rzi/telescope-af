@@ -9,7 +9,7 @@ local M = {}
 
 ---Execute picker search with `pattern`.
 ---@param pattern string pattern to search with configured cmd.
-function M.ag(pattern)
+function M.af(pattern)
 	local opts = {
 		entry_maker = function(entry)
 			local entry_components = vim.split(entry, ":")
@@ -44,7 +44,7 @@ function M.ag(pattern)
 		end,
 	}
 
-	local cmd = require("telescope-ag")._get_opts().cmd
+	local cmd = require("telescope-af")._get_opts().cmd
 	table.insert(cmd, pattern)
 	pickers
 		.new(opts, {
@@ -58,6 +58,6 @@ end
 
 return require("telescope").register_extension({
 	exports = {
-		search = M.ag,
+		search = M.af,
 	},
 })

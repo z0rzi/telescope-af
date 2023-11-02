@@ -3,16 +3,16 @@ local M = {}
 ---Built-in commands.
 M.cmds = {
   grep = { "grep", "-rn" },
-	ag = { "ag" },
+	af = { "af" },
 	rg = { "rg", "-n" },
 }
 
-local _opts = { cmd = M.cmds.ag }
+local _opts = { cmd = M.cmds.af }
 
----Configure telescope-ag.
+---Configure telescope-af.
 ---@param opts table optional table with the keys:
 ---{
----  cmd = `table` - command to run, defaults to `telescope_ag.cmds.ag`
+---  cmd = `table` - command to run, defaults to `telescope_af.cmds.af`
 ---}
 function M.setup(opts)
 	if opts then
